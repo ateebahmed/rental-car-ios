@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,15 @@
 		5C1062682274AF0B00D8ECB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062662274AF0B00D8ECB7 /* Main.storyboard */; };
 		5C10626A2274AF0D00D8ECB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062692274AF0D00D8ECB7 /* Assets.xcassets */; };
 		5C10626D2274AF0D00D8ECB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */; };
+		5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */; };
+		5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */; };
+		5C1062792274FF5D00D8ECB7 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062782274FF5D00D8ECB7 /* JobListViewController.swift */; };
+		5CCDB5C32275D4710070E633 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5C22275D4710070E633 /* Cartfile */; };
+		5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */; };
+		5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */; };
+		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
+		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
+		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,17 @@
 		5C1062692274AF0D00D8ECB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C10626C2274AF0D00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C10626E2274AF0D00D8ECB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvoiceViewController.swift; path = Invoice/InvoiceViewController.swift; sourceTree = "<group>"; };
+		5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Snaps/SnapsViewController.swift; sourceTree = "<group>"; };
+		5C1062782274FF5D00D8ECB7 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobListViewController.swift; path = Job/JobListViewController.swift; sourceTree = "<group>"; };
+		5CCDB5C22275D4710070E633 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		5CCDB5C62275F3350070E633 /* .GoogleMaps-Carthage.version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".GoogleMaps-Carthage.version"; path = "Carthage/Build/.GoogleMaps-Carthage.version"; sourceTree = "<group>"; };
+		5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = "<group>"; };
+		5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
+		5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Carthage/Build/iOS/GooglePlaces.framework; sourceTree = "<group>"; };
+		5CCDB5D222762BFE0070E633 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */,
+				5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */,
+				5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */,
+				5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +64,11 @@
 		5C1062542274AF0A00D8ECB7 = {
 			isa = PBXGroup;
 			children = (
+				5CCDB5D222762BFE0070E633 /* .gitignore */,
+				5CCDB5C22275D4710070E633 /* Cartfile */,
 				5C10625F2274AF0B00D8ECB7 /* Rent24 */,
 				5C10625E2274AF0B00D8ECB7 /* Products */,
+				5CCDB5C52275F3350070E633 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +83,31 @@
 		5C10625F2274AF0B00D8ECB7 /* Rent24 */ = {
 			isa = PBXGroup;
 			children = (
+				5C1062782274FF5D00D8ECB7 /* JobListViewController.swift */,
 				5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */,
 				5C1062622274AF0B00D8ECB7 /* FirstViewController.swift */,
 				5C1062642274AF0B00D8ECB7 /* SecondViewController.swift */,
 				5C1062662274AF0B00D8ECB7 /* Main.storyboard */,
+				5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */,
 				5C1062692274AF0D00D8ECB7 /* Assets.xcassets */,
 				5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */,
 				5C10626E2274AF0D00D8ECB7 /* Info.plist */,
+				5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */,
 			);
 			path = Rent24;
+			sourceTree = "<group>";
+		};
+		5CCDB5C52275F3350070E633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */,
+				5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */,
+				5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */,
+				5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */,
+				5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */,
+				5CCDB5C62275F3350070E633 /* .GoogleMaps-Carthage.version */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +120,7 @@
 				5C1062592274AF0B00D8ECB7 /* Sources */,
 				5C10625A2274AF0B00D8ECB7 /* Frameworks */,
 				5C10625B2274AF0B00D8ECB7 /* Resources */,
+				5CCDB5C42275F06F0070E633 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -103,7 +147,7 @@
 				};
 			};
 			buildConfigurationList = 5C1062582274AF0A00D8ECB7 /* Build configuration list for PBXProject "Rent24" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,21 +169,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCDB5D322762BFE0070E633 /* .gitignore in Resources */,
 				5C10626D2274AF0D00D8ECB7 /* LaunchScreen.storyboard in Resources */,
 				5C10626A2274AF0D00D8ECB7 /* Assets.xcassets in Resources */,
+				5CCDB5C32275D4710070E633 /* Cartfile in Resources */,
 				5C1062682274AF0B00D8ECB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CCDB5C42275F06F0070E633 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/GoogleMaps.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsBase.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsCore.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMaps.framework",
+				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsBase.framework",
+				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C1062592274AF0B00D8ECB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1062792274FF5D00D8ECB7 /* JobListViewController.swift in Sources */,
+				5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */,
 				5C1062652274AF0B00D8ECB7 /* SecondViewController.swift in Sources */,
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
+				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
 				5C1062632274AF0B00D8ECB7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,12 +347,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -288,15 +362,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NX546C9Y7X;
-				INFOPLIST_FILE = Rent24/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				INFOPLIST_FILE = Rent24/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,15 +382,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NX546C9Y7X;
-				INFOPLIST_FILE = Rent24/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				INFOPLIST_FILE = Rent24/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
