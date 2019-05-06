@@ -15,6 +15,8 @@
 		5C10626D2274AF0D00D8ECB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */; };
 		5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */; };
 		5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */; };
+		5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81A9AB2279C510007A1282 /* MainViewController.swift */; };
+		5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB640672280C9D300CE37FF /* LoginViewController.swift */; };
 		5CCDB5C32275D4710070E633 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5C22275D4710070E633 /* Cartfile */; };
 		5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */; };
 		5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */; };
@@ -34,6 +36,8 @@
 		5C10626E2274AF0D00D8ECB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvoiceViewController.swift; path = Invoice/InvoiceViewController.swift; sourceTree = "<group>"; };
 		5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Snaps/SnapsViewController.swift; sourceTree = "<group>"; };
+		5C81A9AB2279C510007A1282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5CB640672280C9D300CE37FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		5CCDB5C22275D4710070E633 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		5CCDB5C62275F3350070E633 /* .GoogleMaps-Carthage.version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".GoogleMaps-Carthage.version"; path = "Carthage/Build/.GoogleMaps-Carthage.version"; sourceTree = "<group>"; };
 		5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				5C1062622274AF0B00D8ECB7 /* FirstViewController.swift */,
 				5C1062642274AF0B00D8ECB7 /* SecondViewController.swift */,
 				5C1062662274AF0B00D8ECB7 /* Main.storyboard */,
+				5CB640672280C9D300CE37FF /* LoginViewController.swift */,
+				5C81A9AB2279C510007A1282 /* MainViewController.swift */,
 				5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */,
 				5C1062692274AF0D00D8ECB7 /* Assets.xcassets */,
 				5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */,
@@ -207,9 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
 				5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */,
 				5C1062652274AF0B00D8ECB7 /* SecondViewController.swift in Sources */,
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
+				5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */,
 				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
 				5C1062632274AF0B00D8ECB7 /* FirstViewController.swift in Sources */,
 			);
