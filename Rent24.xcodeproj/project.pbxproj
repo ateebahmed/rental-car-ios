@@ -23,6 +23,9 @@
 		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
 		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
 		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
+		5CE486E82281E1B800CF5463 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE486E72281E1B800CF5463 /* LoginRequest.swift */; };
+		5CE486EA2281E37500CF5463 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE486E92281E37500CF5463 /* LoginResponse.swift */; };
+		5CE486EC2281E38700CF5463 /* LoginSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE486EB2281E38700CF5463 /* LoginSuccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Carthage/Build/iOS/GooglePlaces.framework; sourceTree = "<group>"; };
 		5CCDB5D222762BFE0070E633 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5CE486E72281E1B800CF5463 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Request/LoginRequest.swift; sourceTree = "<group>"; };
+		5CE486E92281E37500CF5463 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginResponse.swift; path = Response/LoginResponse.swift; sourceTree = "<group>"; };
+		5CE486EB2281E38700CF5463 /* LoginSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginSuccess.swift; path = Response/LoginSuccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +96,15 @@
 				5C1062642274AF0B00D8ECB7 /* SecondViewController.swift */,
 				5C1062662274AF0B00D8ECB7 /* Main.storyboard */,
 				5CB640672280C9D300CE37FF /* LoginViewController.swift */,
+				5CE486E92281E37500CF5463 /* LoginResponse.swift */,
+				5CE486EB2281E38700CF5463 /* LoginSuccess.swift */,
 				5C81A9AB2279C510007A1282 /* MainViewController.swift */,
 				5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */,
 				5C1062692274AF0D00D8ECB7 /* Assets.xcassets */,
 				5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */,
 				5C10626E2274AF0D00D8ECB7 /* Info.plist */,
 				5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */,
+				5CE486E72281E1B800CF5463 /* LoginRequest.swift */,
 			);
 			path = Rent24;
 			sourceTree = "<group>";
@@ -214,12 +223,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
+				5CE486EC2281E38700CF5463 /* LoginSuccess.swift in Sources */,
 				5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */,
+				5CE486EA2281E37500CF5463 /* LoginResponse.swift in Sources */,
 				5C1062652274AF0B00D8ECB7 /* SecondViewController.swift in Sources */,
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
 				5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */,
 				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
 				5C1062632274AF0B00D8ECB7 /* FirstViewController.swift in Sources */,
+				5CE486E82281E1B800CF5463 /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

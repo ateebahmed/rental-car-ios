@@ -99,7 +99,7 @@
                     <connections>
                         <outlet property="contentLoadingView" destination="kA5-CX-XfP" id="5hD-OX-ute"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="gotoHomeScene" id="Kkb-q4-QuS"/>
-                        <segue destination="l3D-TP-lbN" kind="show" identifier="showLoginScene" id="29L-vZ-XFf"/>
+                        <segue destination="l3D-TP-lbN" kind="presentation" identifier="showLoginScene" id="29L-vZ-XFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfP-UE-MsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
