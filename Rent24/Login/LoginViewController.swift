@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         let url = URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/login")!
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let requestBody = LoginRequest(email: email.text!, password: password.text!, device_token: "karachipakistan")
+        let requestBody = LoginRequest(email: email.text!, password: password.text!, device_token: "ios")
         let encoder = JSONEncoder()
         let body = try? encoder.encode(requestBody)
         request.httpBody = body!

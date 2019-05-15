@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */; };
-		5C1062632274AF0B00D8ECB7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062622274AF0B00D8ECB7 /* FirstViewController.swift */; };
-		5C1062652274AF0B00D8ECB7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062642274AF0B00D8ECB7 /* SecondViewController.swift */; };
+		5C1062632274AF0B00D8ECB7 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062622274AF0B00D8ECB7 /* JobViewController.swift */; };
+		5C1062652274AF0B00D8ECB7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062642274AF0B00D8ECB7 /* MapViewController.swift */; };
 		5C1062682274AF0B00D8ECB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062662274AF0B00D8ECB7 /* Main.storyboard */; };
 		5C10626A2274AF0D00D8ECB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062692274AF0D00D8ECB7 /* Assets.xcassets */; };
 		5C10626D2274AF0D00D8ECB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */; };
 		5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */; };
 		5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */; };
+		5C57554D228978DB0047DDEC /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57554C228978DB0047DDEC /* LoginRequest.swift */; };
+		5C575561228979D60047DDEC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555C228979D50047DDEC /* LoginResponse.swift */; };
+		5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555D228979D50047DDEC /* LoginSuccess.swift */; };
+		5C575563228979D60047DDEC /* JobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555E228979D60047DDEC /* JobResponse.swift */; };
+		5C575564228979D60047DDEC /* TripStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555F228979D60047DDEC /* TripStop.swift */; };
+		5C575565228979D60047DDEC /* JobTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C575560228979D60047DDEC /* JobTrip.swift */; };
+		5C575567228984470047DDEC /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C575566228984470047DDEC /* JobTableViewCell.swift */; };
+		5C57556A228989740047DDEC /* JobCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C575569228989740047DDEC /* JobCellDataSource.swift */; };
 		5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81A9AB2279C510007A1282 /* MainViewController.swift */; };
 		5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB640672280C9D300CE37FF /* LoginViewController.swift */; };
 		5CCDB5C32275D4710070E633 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5C22275D4710070E633 /* Cartfile */; };
@@ -23,22 +31,27 @@
 		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
 		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
 		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
-		5CE486E82281E1B800CF5463 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE486E72281E1B800CF5463 /* LoginRequest.swift */; };
-		5CE486EA2281E37500CF5463 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE486E92281E37500CF5463 /* LoginResponse.swift */; };
-		5CE486EC2281E38700CF5463 /* LoginSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE486EB2281E38700CF5463 /* LoginSuccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C10625D2274AF0B00D8ECB7 /* Rent24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rent24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C1062622274AF0B00D8ECB7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5C1062642274AF0B00D8ECB7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5C1062622274AF0B00D8ECB7 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
+		5C1062642274AF0B00D8ECB7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5C1062672274AF0B00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C1062692274AF0D00D8ECB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C10626C2274AF0D00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C10626E2274AF0D00D8ECB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvoiceViewController.swift; path = Invoice/InvoiceViewController.swift; sourceTree = "<group>"; };
 		5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Snaps/SnapsViewController.swift; sourceTree = "<group>"; };
+		5C57554C228978DB0047DDEC /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Rent24/LoginRequest.swift; sourceTree = SOURCE_ROOT; };
+		5C57555C228979D50047DDEC /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		5C57555D228979D50047DDEC /* LoginSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSuccess.swift; sourceTree = "<group>"; };
+		5C57555E228979D60047DDEC /* JobResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobResponse.swift; sourceTree = "<group>"; };
+		5C57555F228979D60047DDEC /* TripStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStop.swift; sourceTree = "<group>"; };
+		5C575560228979D60047DDEC /* JobTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTrip.swift; sourceTree = "<group>"; };
+		5C575566228984470047DDEC /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobTableViewCell.swift; path = /Users/aahmed/Documents/rent24/Rent24/Rent24/JobTableViewCell.swift; sourceTree = "<absolute>"; };
+		5C575569228989740047DDEC /* JobCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobCellDataSource.swift; path = /Users/aahmed/Documents/rent24/Rent24/Rent24/Job/JobCellDataSource.swift; sourceTree = "<absolute>"; };
 		5C81A9AB2279C510007A1282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5CB640672280C9D300CE37FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		5CCDB5C22275D4710070E633 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -49,9 +62,6 @@
 		5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Carthage/Build/iOS/GooglePlaces.framework; sourceTree = "<group>"; };
 		5CCDB5D222762BFE0070E633 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		5CE486E72281E1B800CF5463 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Request/LoginRequest.swift; sourceTree = "<group>"; };
-		5CE486E92281E37500CF5463 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginResponse.swift; path = Response/LoginResponse.swift; sourceTree = "<group>"; };
-		5CE486EB2281E38700CF5463 /* LoginSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginSuccess.swift; path = Response/LoginSuccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,22 +101,31 @@
 		5C10625F2274AF0B00D8ECB7 /* Rent24 */ = {
 			isa = PBXGroup;
 			children = (
+				5C5755682289845C0047DDEC /* Job */,
 				5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */,
-				5C1062622274AF0B00D8ECB7 /* FirstViewController.swift */,
-				5C1062642274AF0B00D8ECB7 /* SecondViewController.swift */,
+				5C1062642274AF0B00D8ECB7 /* MapViewController.swift */,
 				5C1062662274AF0B00D8ECB7 /* Main.storyboard */,
 				5CB640672280C9D300CE37FF /* LoginViewController.swift */,
-				5CE486E92281E37500CF5463 /* LoginResponse.swift */,
-				5CE486EB2281E38700CF5463 /* LoginSuccess.swift */,
+				5CF88CD0228975EC005692C3 /* ResponseStruct */,
 				5C81A9AB2279C510007A1282 /* MainViewController.swift */,
 				5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */,
 				5C1062692274AF0D00D8ECB7 /* Assets.xcassets */,
 				5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */,
 				5C10626E2274AF0D00D8ECB7 /* Info.plist */,
 				5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */,
-				5CE486E72281E1B800CF5463 /* LoginRequest.swift */,
+				5CF88CD1228976A7005692C3 /* Request */,
 			);
 			path = Rent24;
+			sourceTree = "<group>";
+		};
+		5C5755682289845C0047DDEC /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				5C575569228989740047DDEC /* JobCellDataSource.swift */,
+				5C575566228984470047DDEC /* JobTableViewCell.swift */,
+				5C1062622274AF0B00D8ECB7 /* JobViewController.swift */,
+			);
+			path = Job;
 			sourceTree = "<group>";
 		};
 		5CCDB5C52275F3350070E633 /* Frameworks */ = {
@@ -120,6 +139,26 @@
 				5CCDB5C62275F3350070E633 /* .GoogleMaps-Carthage.version */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CF88CD0228975EC005692C3 /* ResponseStruct */ = {
+			isa = PBXGroup;
+			children = (
+				5C57555E228979D60047DDEC /* JobResponse.swift */,
+				5C575560228979D60047DDEC /* JobTrip.swift */,
+				5C57555C228979D50047DDEC /* LoginResponse.swift */,
+				5C57555D228979D50047DDEC /* LoginSuccess.swift */,
+				5C57555F228979D60047DDEC /* TripStop.swift */,
+			);
+			path = ResponseStruct;
+			sourceTree = "<group>";
+		};
+		5CF88CD1228976A7005692C3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5C57554C228978DB0047DDEC /* LoginRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,15 +262,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
-				5CE486EC2281E38700CF5463 /* LoginSuccess.swift in Sources */,
+				5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */,
+				5C575565228979D60047DDEC /* JobTrip.swift in Sources */,
+				5C575567228984470047DDEC /* JobTableViewCell.swift in Sources */,
 				5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */,
-				5CE486EA2281E37500CF5463 /* LoginResponse.swift in Sources */,
-				5C1062652274AF0B00D8ECB7 /* SecondViewController.swift in Sources */,
+				5C575563228979D60047DDEC /* JobResponse.swift in Sources */,
+				5C575561228979D60047DDEC /* LoginResponse.swift in Sources */,
+				5C57554D228978DB0047DDEC /* LoginRequest.swift in Sources */,
+				5C57556A228989740047DDEC /* JobCellDataSource.swift in Sources */,
+				5C575564228979D60047DDEC /* TripStop.swift in Sources */,
+				5C1062652274AF0B00D8ECB7 /* MapViewController.swift in Sources */,
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
 				5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */,
 				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
-				5C1062632274AF0B00D8ECB7 /* FirstViewController.swift in Sources */,
-				5CE486E82281E1B800CF5463 /* LoginRequest.swift in Sources */,
+				5C1062632274AF0B00D8ECB7 /* JobViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
