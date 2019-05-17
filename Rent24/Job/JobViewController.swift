@@ -35,6 +35,8 @@ class JobViewController: UIViewController {
         jobTableView.estimatedRowHeight = 80
         jobTableView.rowHeight = UITableView.automaticDimension
 
+        jobTableView.delegate = self
+
         let searchQuery: [CFString:Any] = [kSecClass: kSecClassGenericPassword,
                                            kSecAttrGeneric: "com.rent24.driver.identifier".data(using: .utf8)!,
                                            kSecAttrAccount: "driver".data(using: .utf8)!,
@@ -64,11 +66,21 @@ class JobViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        contentLoadingView.startAnimating()
         loadJobList(for: 0)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailViewController = segue.destination as? JobDetailViewController,
+        let index = jobTableView.indexPathForSelectedRow?.row
+            else {
+                return
+        }
+        detailViewController.trip = dataSource?.trips[index]
+    }
+
     private func loadJobList(for type: Int) {
+        contentLoadingView.startAnimating()
+
         var jobType = ""
         switch type {
         case 0:
@@ -106,5 +118,13 @@ class JobViewController: UIViewController {
             }
         }
         task.resume()
+    }
+}
+
+extension JobViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        dataSource?.trips[indexPath.row]
+        performSegue(withIdentifier: "showJobDetail", sender: self)
     }
 }

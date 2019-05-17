@@ -31,6 +31,7 @@
 		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
 		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
 		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
+		5CDEFBC8228F101A00D34575 /* JobDetailNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEFBC7228F101A00D34575 /* JobDetailNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Carthage/Build/iOS/GooglePlaces.framework; sourceTree = "<group>"; };
 		5CCDB5D222762BFE0070E633 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5CDEFBC7228F101A00D34575 /* JobDetailNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				5C575569228989740047DDEC /* JobCellDataSource.swift */,
 				5C575566228984470047DDEC /* JobTableViewCell.swift */,
 				5C1062622274AF0B00D8ECB7 /* JobViewController.swift */,
+				5CDEFBC7228F101A00D34575 /* JobDetailNavigationController.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDEFBC8228F101A00D34575 /* JobDetailNavigationController.swift in Sources */,
 				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
 				5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */,
 				5C575565228979D60047DDEC /* JobTrip.swift in Sources */,
