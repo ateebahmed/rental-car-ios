@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JobDetailViewController: UIViewController {
+class JobDetailViewController: UITableViewController {
 
     @IBOutlet weak var rcmIdLabel: UILabel!
     @IBOutlet weak var fromLabel: UILabel!

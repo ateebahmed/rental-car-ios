@@ -12,6 +12,7 @@ class JobViewController: UIViewController {
 
     @IBOutlet weak var contentLoadingView: UIActivityIndicatorView!
     @IBOutlet weak var jobTableView: UITableView!
+    @IBOutlet weak var selectedJobType: UISegmentedControl!
     
     private lazy var session: URLSession = {
         let configuration = URLSessionConfiguration.default
@@ -21,7 +22,7 @@ class JobViewController: UIViewController {
         return URLSession(configuration: configuration)
     }()
     private var token = ""
-    var dataSource: JobCellDataSource? = nil
+    var dataSource: JobCellDataSource?
 
     @IBAction func jobTypeValueChange(_ sender: UISegmentedControl) {
         loadJobList(for: sender.selectedSegmentIndex)
@@ -66,7 +67,7 @@ class JobViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        loadJobList(for: 0)
+        loadJobList(for: selectedJobType.selectedSegmentIndex)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -124,7 +125,6 @@ class JobViewController: UIViewController {
 extension JobViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        dataSource?.trips[indexPath.row]
         performSegue(withIdentifier: "showJobDetail", sender: self)
     }
 }
