@@ -31,7 +31,6 @@ class LoginViewController: UIViewController {
         signin.isEnabled = false
         email.isEnabled = false
         password.isEnabled = false
-        loadingView.startAnimating()
 
         let url = URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/login")!
         var request = URLRequest(url: url)

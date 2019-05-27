@@ -15,7 +15,11 @@
 		5C10626A2274AF0D00D8ECB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062692274AF0D00D8ECB7 /* Assets.xcassets */; };
 		5C10626D2274AF0D00D8ECB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */; };
 		5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */; };
-		5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */; };
+		5C396BDE2291CF0B000B7E0B /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BDD2291CF0B000B7E0B /* SnapsViewController.swift */; };
+		5C396BE02291CF35000B7E0B /* SnapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BDF2291CF35000B7E0B /* SnapCollectionViewCell.swift */; };
+		5C396BE22291DA7D000B7E0B /* SnapCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */; };
+		5C396BE42291E3BC000B7E0B /* InvoiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BE32291E3BC000B7E0B /* InvoiceResponse.swift */; };
+		5C396BE62291E3F3000B7E0B /* InvoiceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BE52291E3F3000B7E0B /* InvoiceEntry.swift */; };
 		5C57554D228978DB0047DDEC /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57554C228978DB0047DDEC /* LoginRequest.swift */; };
 		5C575561228979D60047DDEC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555C228979D50047DDEC /* LoginResponse.swift */; };
 		5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555D228979D50047DDEC /* LoginSuccess.swift */; };
@@ -24,6 +28,10 @@
 		5C575565228979D60047DDEC /* JobTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C575560228979D60047DDEC /* JobTrip.swift */; };
 		5C575567228984470047DDEC /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C575566228984470047DDEC /* JobTableViewCell.swift */; };
 		5C57556A228989740047DDEC /* JobCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C575569228989740047DDEC /* JobCellDataSource.swift */; };
+		5C5C1778229AA93B0055A0CC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5C1777229AA93B0055A0CC /* Kingfisher.framework */; };
+		5C5C177B229AE1EE0055A0CC /* SnapsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C177A229AE1EE0055A0CC /* SnapsResponse.swift */; };
+		5C5C177D229AE2120055A0CC /* SnapsSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C177C229AE2120055A0CC /* SnapsSuccess.swift */; };
+		5C5C177F229B48D90055A0CC /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C177E229B48D90055A0CC /* StatusResponse.swift */; };
 		5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81A9AB2279C510007A1282 /* MainViewController.swift */; };
 		5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB640672280C9D300CE37FF /* LoginViewController.swift */; };
 		5CCDB5C32275D4710070E633 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5C22275D4710070E633 /* Cartfile */; };
@@ -45,7 +53,11 @@
 		5C10626C2274AF0D00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C10626E2274AF0D00D8ECB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvoiceViewController.swift; path = Invoice/InvoiceViewController.swift; sourceTree = "<group>"; };
-		5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Snaps/SnapsViewController.swift; sourceTree = "<group>"; };
+		5C396BDD2291CF0B000B7E0B /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Rent24/SnapsViewController.swift; sourceTree = SOURCE_ROOT; };
+		5C396BDF2291CF35000B7E0B /* SnapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCellDataSource.swift; sourceTree = "<group>"; };
+		5C396BE32291E3BC000B7E0B /* InvoiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceResponse.swift; sourceTree = "<group>"; };
+		5C396BE52291E3F3000B7E0B /* InvoiceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceEntry.swift; sourceTree = "<group>"; };
 		5C57554C228978DB0047DDEC /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Rent24/LoginRequest.swift; sourceTree = SOURCE_ROOT; };
 		5C57555C228979D50047DDEC /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5C57555D228979D50047DDEC /* LoginSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSuccess.swift; sourceTree = "<group>"; };
@@ -54,6 +66,10 @@
 		5C575560228979D60047DDEC /* JobTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTrip.swift; sourceTree = "<group>"; };
 		5C575566228984470047DDEC /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobTableViewCell.swift; path = /Users/aahmed/Documents/rent24/Rent24/Rent24/JobTableViewCell.swift; sourceTree = "<absolute>"; };
 		5C575569228989740047DDEC /* JobCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobCellDataSource.swift; path = /Users/aahmed/Documents/rent24/Rent24/Rent24/Job/JobCellDataSource.swift; sourceTree = "<absolute>"; };
+		5C5C1777229AA93B0055A0CC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		5C5C177A229AE1EE0055A0CC /* SnapsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsResponse.swift; sourceTree = "<group>"; };
+		5C5C177C229AE2120055A0CC /* SnapsSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsSuccess.swift; sourceTree = "<group>"; };
+		5C5C177E229B48D90055A0CC /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		5C81A9AB2279C510007A1282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5CB640672280C9D300CE37FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		5CCDB5C22275D4710070E633 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -71,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5C1778229AA93B0055A0CC /* Kingfisher.framework in Frameworks */,
 				5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */,
 				5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */,
 				5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */,
@@ -103,6 +120,7 @@
 		5C10625F2274AF0B00D8ECB7 /* Rent24 */ = {
 			isa = PBXGroup;
 			children = (
+				5C396BDC2291CEC7000B7E0B /* Snap */,
 				5C5755682289845C0047DDEC /* Job */,
 				5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */,
 				5C1062642274AF0B00D8ECB7 /* MapViewController.swift */,
@@ -114,10 +132,19 @@
 				5C1062692274AF0D00D8ECB7 /* Assets.xcassets */,
 				5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */,
 				5C10626E2274AF0D00D8ECB7 /* Info.plist */,
-				5C1062762274ED2900D8ECB7 /* SnapsViewController.swift */,
 				5CF88CD1228976A7005692C3 /* Request */,
 			);
 			path = Rent24;
+			sourceTree = "<group>";
+		};
+		5C396BDC2291CEC7000B7E0B /* Snap */ = {
+			isa = PBXGroup;
+			children = (
+				5C396BDD2291CF0B000B7E0B /* SnapsViewController.swift */,
+				5C396BDF2291CF35000B7E0B /* SnapCollectionViewCell.swift */,
+				5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */,
+			);
+			path = Snap;
 			sourceTree = "<group>";
 		};
 		5C5755682289845C0047DDEC /* Job */ = {
@@ -134,6 +161,7 @@
 		5CCDB5C52275F3350070E633 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C5C1777229AA93B0055A0CC /* Kingfisher.framework */,
 				5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */,
 				5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */,
 				5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */,
@@ -152,6 +180,11 @@
 				5C57555C228979D50047DDEC /* LoginResponse.swift */,
 				5C57555D228979D50047DDEC /* LoginSuccess.swift */,
 				5C57555F228979D60047DDEC /* TripStop.swift */,
+				5C396BE32291E3BC000B7E0B /* InvoiceResponse.swift */,
+				5C396BE52291E3F3000B7E0B /* InvoiceEntry.swift */,
+				5C5C177A229AE1EE0055A0CC /* SnapsResponse.swift */,
+				5C5C177C229AE2120055A0CC /* SnapsSuccess.swift */,
+				5C5C177E229B48D90055A0CC /* StatusResponse.swift */,
 			);
 			path = ResponseStruct;
 			sourceTree = "<group>";
@@ -245,6 +278,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMaps.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsBase.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -252,6 +286,7 @@
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMaps.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsBase.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsCore.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,21 +299,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5C177B229AE1EE0055A0CC /* SnapsResponse.swift in Sources */,
 				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
 				5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */,
 				5C575565228979D60047DDEC /* JobTrip.swift in Sources */,
 				5C0090BA22900C0200C65C52 /* JobDetailViewController.swift in Sources */,
 				5C575567228984470047DDEC /* JobTableViewCell.swift in Sources */,
-				5C1062772274ED2900D8ECB7 /* SnapsViewController.swift in Sources */,
+				5C5C177F229B48D90055A0CC /* StatusResponse.swift in Sources */,
 				5C575563228979D60047DDEC /* JobResponse.swift in Sources */,
 				5C575561228979D60047DDEC /* LoginResponse.swift in Sources */,
 				5C57554D228978DB0047DDEC /* LoginRequest.swift in Sources */,
+				5C396BE22291DA7D000B7E0B /* SnapCellDataSource.swift in Sources */,
+				5C396BDE2291CF0B000B7E0B /* SnapsViewController.swift in Sources */,
+				5C5C177D229AE2120055A0CC /* SnapsSuccess.swift in Sources */,
 				5C57556A228989740047DDEC /* JobCellDataSource.swift in Sources */,
 				5C575564228979D60047DDEC /* TripStop.swift in Sources */,
 				5C1062652274AF0B00D8ECB7 /* MapViewController.swift in Sources */,
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
 				5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */,
 				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
+				5C396BE62291E3F3000B7E0B /* InvoiceEntry.swift in Sources */,
+				5C396BE42291E3BC000B7E0B /* InvoiceResponse.swift in Sources */,
+				5C396BE02291CF35000B7E0B /* SnapCollectionViewCell.swift in Sources */,
 				5C1062632274AF0B00D8ECB7 /* JobViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

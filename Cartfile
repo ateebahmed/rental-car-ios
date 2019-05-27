@@ -1,1 +1,2 @@
 git "https://github.com/leoneparise/GoogleMaps-Carthage.git"
+github "onevcat/Kingfisher" ~> 4.10.1
