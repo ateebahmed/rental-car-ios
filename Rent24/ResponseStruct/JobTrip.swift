@@ -25,6 +25,12 @@ struct JobTrip: Decodable {
     }
     let dropoffLocation: String?
     let startTime: String?
+    var startTimeDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd HH:MM:ss"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return dateFormatter.date(from: startTime ?? "0000-00-00 00:00:00")
+    }
     let jobType: String?
     let task: String?
     let dropoffLat: String?
@@ -36,6 +42,9 @@ struct JobTrip: Decodable {
         return Double(dropoffLong ?? "0.0")
     }
     let status: String?
+    var statusInt: Int? {
+        return Int(status ?? "0")
+    }
     let route: String?
     let stops: [TripStop]
 }

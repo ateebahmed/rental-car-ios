@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import UserNotifications
 
 class JobViewController: UIViewController {
 
     @IBOutlet weak var contentLoadingView: UIActivityIndicatorView!
     @IBOutlet weak var jobTableView: UITableView!
     @IBOutlet weak var selectedJobType: UISegmentedControl!
-    
+
     private lazy var session: URLSession = {
         let configuration = URLSessionConfiguration.default
         if #available(iOS 11.0, *) {
@@ -95,7 +96,7 @@ class JobViewController: UIViewController {
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        let task: URLSessionTask = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 print("error occured", error.localizedDescription)
                 return
@@ -110,7 +111,45 @@ class JobViewController: UIViewController {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let responseJson = try? decoder.decode(JobResponse.self, from: data)
-                self.dataSource = JobCellDataSource(trips: responseJson!.success)
+                if let jobResponse = responseJson {
+                    self.dataSource = JobCellDataSource(trips: jobResponse.success)
+                    if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 3 ... 4 ~= trip.statusInt!}).first {
+                        if let date = trip.startTimeDate {
+                            let currentDate = Date()
+                            
+                        }
+                    } else if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 2 == trip.statusInt}).first {
+                        
+                    }
+                }
+
+                let title = "Rent 24 Job Alert"
+                let body = "A new job has started"
+                if #available(iOS 10.0, *) {
+                    let notification = UNMutableNotificationContent()
+                    notification.title = title
+                    notification.body = body
+                    notification.sound = UNNotificationSound.default
+
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: notification, trigger: trigger)
+                    DispatchQueue.main.async {
+                        UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in print(error.debugDescription, error)})
+                    }
+                } else {
+                    let notification = UILocalNotification()
+                    notification.fireDate = try? Date(timeIntervalSinceNow: 1)
+                    notification.alertBody = "Testing notification from local"
+                    notification.timeZone = TimeZone.current
+                    notification.userInfo = ["Key":"Value"]
+                    notification.soundName = UILocalNotificationDefaultSoundName
+                    notification.category = "jobReminder"
+                    notification.applicationIconBadgeNumber = 1
+                    DispatchQueue.main.async {
+                        UIApplication.shared.scheduleLocalNotification(notification)
+                    }
+                }
+
                 DispatchQueue.main.async {
                     self.jobTableView.dataSource = self.dataSource
                     self.jobTableView.reloadData()

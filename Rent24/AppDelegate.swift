@@ -8,16 +8,31 @@
 
 import UIKit
 import GoogleMaps
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyCuGHmRXRd5RMJaseiDZxJh0DcxGF5CdQI")
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound], completionHandler: {result, error in
+                if !result {
+                    let alert = UIAlertController(title: "Rent 24 Notifications", message: "App can't send alerts when a new job is assigned or updated", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                }
+                if let error = error {
+                    print("Error occured when asking for notification permission", error)
+                }
+            })
+        } else {
+            // Fallback on earlier versions
+            application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType(rawValue: UIUserNotificationType.sound.rawValue | UIUserNotificationType.badge.rawValue | UIUserNotificationType.alert.rawValue), categories: nil))
+        }
         return true
     }
 
@@ -46,3 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+@available(iOS 10.0, *)
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.badge, .alert, .sound])
+    }
+}
