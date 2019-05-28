@@ -24,6 +24,8 @@ class JobViewController: UIViewController {
     }()
     private var token = ""
     var dataSource: JobCellDataSource?
+    let twoHoursInterval = 2 * 60 * 60
+    let offset = 5.0
 
     @IBAction func jobTypeValueChange(_ sender: UISegmentedControl) {
         loadJobList(for: sender.selectedSegmentIndex)
@@ -113,40 +115,12 @@ class JobViewController: UIViewController {
                 let responseJson = try? decoder.decode(JobResponse.self, from: data)
                 if let jobResponse = responseJson {
                     self.dataSource = JobCellDataSource(trips: jobResponse.success)
-                    if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 3 ... 4 ~= trip.statusInt!}).first {
-                        if let date = trip.startTimeDate {
-                            let currentDate = Date()
-                            
+                    if 0 == type {
+                        if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 3 ... 4 ~= trip.statusInt!}).first {
+                            self.sendNotification(for: trip)
+                        } else if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 2 == trip.statusInt}).first {
+                            self.sendNotification(for: trip)
                         }
-                    } else if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 2 == trip.statusInt}).first {
-                        
-                    }
-                }
-
-                let title = "Rent 24 Job Alert"
-                let body = "A new job has started"
-                if #available(iOS 10.0, *) {
-                    let notification = UNMutableNotificationContent()
-                    notification.title = title
-                    notification.body = body
-                    notification.sound = UNNotificationSound.default
-
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: notification, trigger: trigger)
-                    DispatchQueue.main.async {
-                        UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in print(error.debugDescription, error)})
-                    }
-                } else {
-                    let notification = UILocalNotification()
-                    notification.fireDate = try? Date(timeIntervalSinceNow: 1)
-                    notification.alertBody = "Testing notification from local"
-                    notification.timeZone = TimeZone.current
-                    notification.userInfo = ["Key":"Value"]
-                    notification.soundName = UILocalNotificationDefaultSoundName
-                    notification.category = "jobReminder"
-                    notification.applicationIconBadgeNumber = 1
-                    DispatchQueue.main.async {
-                        UIApplication.shared.scheduleLocalNotification(notification)
                     }
                 }
 
@@ -158,6 +132,53 @@ class JobViewController: UIViewController {
             }
         }
         task.resume()
+    }
+
+    private func sendNotification(for trip: JobTrip) {
+        if let date = trip.startTimeDate {
+            var pickupDate = Date(timeInterval: TimeInterval(-self.twoHoursInterval), since: date)
+            if pickupDate < Date() {
+                pickupDate = Date(timeIntervalSinceNow: self.offset)
+            }
+            sendNotifcation(on: pickupDate, with: trip)
+        }
+    }
+
+    private func sendNotifcation(on date: Date, with trip: JobTrip) {
+        let title = "Rent 24 Job Alert"
+        let body = "A new job has started"
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().getNotificationSettings(completionHandler: { settings in
+                guard settings.authorizationStatus == .authorized else { return }
+
+                let notification = UNMutableNotificationContent()
+                notification.title = title
+                notification.body = body
+                notification.sound = UNNotificationSound.default
+
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: date.timeIntervalSinceNow, repeats: false)
+                let request = UNNotificationRequest(identifier: "jobReminder", content: notification, trigger: trigger)
+                DispatchQueue.main.async {
+                    UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in print(error.debugDescription, error)})
+                }
+            })
+        } else {
+            if let settings = UIApplication.shared.currentUserNotificationSettings {
+                if !(settings.types.intersection([.alert, .badge, .sound]).isEmpty) {
+                    let notification = UILocalNotification()
+                    notification.fireDate = date
+                    notification.alertBody = "Testing notification from local"
+                    notification.timeZone = TimeZone.current
+                    notification.userInfo = ["Key":"Value"]
+                    notification.soundName = UILocalNotificationDefaultSoundName
+                    notification.category = "jobReminder"
+                    notification.applicationIconBadgeNumber = 1
+                    DispatchQueue.main.async {
+                        UIApplication.shared.scheduleLocalNotification(notification)
+                    }
+                }
+            }
+        }
     }
 }
 

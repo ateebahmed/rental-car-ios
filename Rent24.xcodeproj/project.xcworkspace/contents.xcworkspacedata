@@ -2,27 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/Job/JobCellDataSource.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/JobTableViewCell.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/ResponseStruct/JobResponse.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/ResponseStruct/JobTrip.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/ResponseStruct/LoginResponse.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/ResponseStruct/LoginSuccess.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/aahmed/Documents/rent24/Rent24/Rent24/ResponseStruct/TripStop.swift">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

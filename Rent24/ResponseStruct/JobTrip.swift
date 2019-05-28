@@ -27,7 +27,7 @@ struct JobTrip: Decodable {
     let startTime: String?
     var startTimeDate: Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd HH:MM:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         return dateFormatter.date(from: startTime ?? "0000-00-00 00:00:00")
     }
