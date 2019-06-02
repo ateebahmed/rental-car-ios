@@ -37,7 +37,7 @@ class JobViewController: UIViewController {
         contentLoadingView.startAnimating()
 
         jobTableView.estimatedRowHeight = 80
-        jobTableView.rowHeight = UITableView.automaticDimension
+        jobTableView.rowHeight = UITableViewAutomaticDimension
 
         jobTableView.delegate = self
 
@@ -145,37 +145,31 @@ class JobViewController: UIViewController {
     }
 
     private func sendNotifcation(on date: Date, with trip: JobTrip) {
-        let title = "Rent 24 Job Alert"
+        let title = "Job Alert"
         let body = "A new job has started"
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().getNotificationSettings(completionHandler: { settings in
-                guard settings.authorizationStatus == .authorized else { return }
-
-                let notification = UNMutableNotificationContent()
-                notification.title = title
-                notification.body = body
-                notification.sound = UNNotificationSound.default
-
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: date.timeIntervalSinceNow, repeats: false)
-                let request = UNNotificationRequest(identifier: "jobReminder", content: notification, trigger: trigger)
-                DispatchQueue.main.async {
-                    UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in print(error.debugDescription, error)})
-                }
-            })
-        } else {
+        let identifier = "jobReminder"
+        DispatchQueue.main.async {
             if let settings = UIApplication.shared.currentUserNotificationSettings {
                 if !(settings.types.intersection([.alert, .badge, .sound]).isEmpty) {
                     let notification = UILocalNotification()
                     notification.fireDate = date
-                    notification.alertBody = "Testing notification from local"
-                    notification.timeZone = TimeZone.current
-                    notification.userInfo = ["Key":"Value"]
-                    notification.soundName = UILocalNotificationDefaultSoundName
-                    notification.category = "jobReminder"
-                    notification.applicationIconBadgeNumber = 1
-                    DispatchQueue.main.async {
-                        UIApplication.shared.scheduleLocalNotification(notification)
+                    if #available(iOS 8.2, *) {
+                        notification.alertTitle = title
                     }
+                    notification.alertBody = body
+                    notification.timeZone = TimeZone.current
+                    notification.userInfo = [
+                        "type": "ACIVE_JOB_MAP_REQUEST",
+                        "pickupLat": trip.pickupLat!,
+                        "pickupLong": trip.pickupLong!,
+                        "dropOffLat": trip.dropoffLat!,
+                        "dropOffLong": trip.dropoffLong!,
+                        "jobId": trip.id
+                    ]
+                    notification.soundName = UILocalNotificationDefaultSoundName
+                    notification.category = identifier
+                    notification.applicationIconBadgeNumber = 1
+                    UIApplication.shared.scheduleLocalNotification(notification)
                 }
             }
         }

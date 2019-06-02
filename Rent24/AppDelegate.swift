@@ -58,7 +58,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        if let type =  notification.userInfo?["type"] as? String,
+            "ACIVE_JOB_MAP_REQUEST" == type {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeTabController") as! UITabBarController
+            homeVC.selectedIndex = 1
+            if let pickupLat = notification.userInfo?["pickupLat"] as? String,
+                let pickupLong = notification.userInfo?["pickupLong"] as? String,
+                let dropOffLat = notification.userInfo?["dropOffLong"] as? String,
+                let dropOffLong = notification.userInfo?["dropOffLong"] as? String,
+                let jobId = notification.userInfo?["jobId"] as? Int,
+                let mapVC = homeVC.selectedViewController as? MapViewController {
+                    let trip = JobTrip(id: jobId, rcmId: "", pickupLocation: "", pickupLat: pickupLat, pickupLong: pickupLong, dropoffLocation: "", startTime: "", jobType: "", task: "", dropoffLat: dropOffLat, dropoffLong: dropOffLong, status: "", route: "", stops: [])
+                    mapVC.updateMap(for: trip)
+            }
+            window?.rootViewController = homeVC
+        }
+    }
 }
 
 @available(iOS 10.0, *)
