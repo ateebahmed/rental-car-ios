@@ -85,7 +85,7 @@ class SnapsViewController: UIViewController {
                 let aText = amountField.text {
                 self.descriptionText = dText
                 self.amount = Double(aText)!
-                let imageData = self.receiptImage?.pngData()!
+                let imageData = UIImagePNGRepresentation(self.receiptImage!)
                 var request = URLRequest(url: URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/job/status")!)
                 request.httpMethod = "POST"
                 let boundary = "Boundary-\(UUID.init().uuidString)"
@@ -242,13 +242,13 @@ class SnapsViewController: UIViewController {
 }
 
 extension SnapsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.originalImage] as! UIImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info["originalImage"] as! UIImage
         if #available(iOS 11.0, *) {
-            receiptImageUrl = (info[.imageURL] as! NSURL)
+            receiptImageUrl = (info["imageUrl"] as! NSURL)
         } else {
             // Fallback on earlier versions
-            receiptImageUrl = (info[.referenceURL] as! NSURL)
+            receiptImageUrl = (info["referenceURL"] as! NSURL)
         }
         receiptImage = image
         dismiss(animated: true, completion: nil)

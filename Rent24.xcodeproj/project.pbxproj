@@ -10,7 +10,6 @@
 		5C0090BA22900C0200C65C52 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0090B922900C0200C65C52 /* JobDetailViewController.swift */; };
 		5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */; };
 		5C1062632274AF0B00D8ECB7 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062622274AF0B00D8ECB7 /* JobViewController.swift */; };
-		5C1062652274AF0B00D8ECB7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062642274AF0B00D8ECB7 /* MapViewController.swift */; };
 		5C1062682274AF0B00D8ECB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062662274AF0B00D8ECB7 /* Main.storyboard */; };
 		5C10626A2274AF0D00D8ECB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062692274AF0D00D8ECB7 /* Assets.xcassets */; };
 		5C10626D2274AF0D00D8ECB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */; };
@@ -40,6 +39,9 @@
 		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
 		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
 		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
+		5CE0B4C722A4254400A532E6 /* TLPhotoPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */; };
+		5CE0B4C922A425CF00A532E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0B4C822A425CF00A532E6 /* MapViewController.swift */; };
+		5CE0B4CC22A446AC00A532E6 /* CarDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0B4CB22A446AC00A532E6 /* CarDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +49,6 @@
 		5C10625D2274AF0B00D8ECB7 /* Rent24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rent24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C1062622274AF0B00D8ECB7 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
-		5C1062642274AF0B00D8ECB7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5C1062672274AF0B00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C1062692274AF0D00D8ECB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C10626C2274AF0D00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +81,11 @@
 		5CCDB5CC2275F3CF0070E633 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsM4B.framework; path = Carthage/Build/iOS/GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Carthage/Build/iOS/GooglePlaces.framework; sourceTree = "<group>"; };
 		5CCDB5D222762BFE0070E633 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLPhotoPicker.framework; path = Carthage/Build/iOS/TLPhotoPicker.framework; sourceTree = "<group>"; };
+		5CE0B4C822A425CF00A532E6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5CE0B4CB22A446AC00A532E6 /* CarDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableViewController.swift; sourceTree = "<group>"; };
+		5CF4248522A2D258008F3538 /* DKCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKCamera.framework; path = Carthage/Build/iOS/DKCamera.framework; sourceTree = "<group>"; };
+		5CF4248722A2D4D7008F3538 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE0B4C722A4254400A532E6 /* TLPhotoPicker.framework in Frameworks */,
 				5C5C1778229AA93B0055A0CC /* Kingfisher.framework in Frameworks */,
 				5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */,
 				5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */,
@@ -120,10 +127,10 @@
 		5C10625F2274AF0B00D8ECB7 /* Rent24 */ = {
 			isa = PBXGroup;
 			children = (
+				5CE0B4CA22A425E100A532E6 /* Map */,
 				5C396BDC2291CEC7000B7E0B /* Snap */,
 				5C5755682289845C0047DDEC /* Job */,
 				5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */,
-				5C1062642274AF0B00D8ECB7 /* MapViewController.swift */,
 				5C1062662274AF0B00D8ECB7 /* Main.storyboard */,
 				5CB640672280C9D300CE37FF /* LoginViewController.swift */,
 				5CF88CD0228975EC005692C3 /* ResponseStruct */,
@@ -161,6 +168,9 @@
 		5CCDB5C52275F3350070E633 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */,
+				5CF4248722A2D4D7008F3538 /* SDWebImage.framework */,
+				5CF4248522A2D258008F3538 /* DKCamera.framework */,
 				5C5C1777229AA93B0055A0CC /* Kingfisher.framework */,
 				5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */,
 				5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */,
@@ -170,6 +180,15 @@
 				5CCDB5C62275F3350070E633 /* .GoogleMaps-Carthage.version */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CE0B4CA22A425E100A532E6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5CE0B4C822A425CF00A532E6 /* MapViewController.swift */,
+				5CE0B4CB22A446AC00A532E6 /* CarDetailTableViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		5CF88CD0228975EC005692C3 /* ResponseStruct */ = {
@@ -279,6 +298,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsBase.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsCore.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/TLPhotoPicker.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -287,6 +307,7 @@
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsBase.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsCore.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/TLPhotoPicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,6 +327,7 @@
 				5C0090BA22900C0200C65C52 /* JobDetailViewController.swift in Sources */,
 				5C575567228984470047DDEC /* JobTableViewCell.swift in Sources */,
 				5C5C177F229B48D90055A0CC /* StatusResponse.swift in Sources */,
+				5CE0B4C922A425CF00A532E6 /* MapViewController.swift in Sources */,
 				5C575563228979D60047DDEC /* JobResponse.swift in Sources */,
 				5C575561228979D60047DDEC /* LoginResponse.swift in Sources */,
 				5C57554D228978DB0047DDEC /* LoginRequest.swift in Sources */,
@@ -314,8 +336,8 @@
 				5C5C177D229AE2120055A0CC /* SnapsSuccess.swift in Sources */,
 				5C57556A228989740047DDEC /* JobCellDataSource.swift in Sources */,
 				5C575564228979D60047DDEC /* TripStop.swift in Sources */,
-				5C1062652274AF0B00D8ECB7 /* MapViewController.swift in Sources */,
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
+				5CE0B4CC22A446AC00A532E6 /* CarDetailTableViewController.swift in Sources */,
 				5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */,
 				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
 				5C396BE62291E3F3000B7E0B /* InvoiceEntry.swift in Sources */,
@@ -477,7 +499,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -497,7 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
