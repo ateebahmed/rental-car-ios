@@ -32,14 +32,15 @@
 		5C5C177D229AE2120055A0CC /* SnapsSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C177C229AE2120055A0CC /* SnapsSuccess.swift */; };
 		5C5C177F229B48D90055A0CC /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5C177E229B48D90055A0CC /* StatusResponse.swift */; };
 		5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81A9AB2279C510007A1282 /* MainViewController.swift */; };
+		5C82D38722AF04A3004C7682 /* JobStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82D38622AF04A3004C7682 /* JobStatusRequest.swift */; };
 		5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB640672280C9D300CE37FF /* LoginViewController.swift */; };
+		5CC9AAF022A572B600C1F262 /* NohanaImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC9AAEF22A572B600C1F262 /* NohanaImagePicker.framework */; };
 		5CCDB5C32275D4710070E633 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5C22275D4710070E633 /* Cartfile */; };
 		5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */; };
 		5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */; };
 		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
 		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
 		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
-		5CE0B4C722A4254400A532E6 /* TLPhotoPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */; };
 		5CE0B4C922A425CF00A532E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0B4C822A425CF00A532E6 /* MapViewController.swift */; };
 		5CE0B4CC22A446AC00A532E6 /* CarDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0B4CB22A446AC00A532E6 /* CarDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +73,9 @@
 		5C5C177C229AE2120055A0CC /* SnapsSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsSuccess.swift; sourceTree = "<group>"; };
 		5C5C177E229B48D90055A0CC /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		5C81A9AB2279C510007A1282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5C82D38622AF04A3004C7682 /* JobStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobStatusRequest.swift; path = Rent24/JobStatusRequest.swift; sourceTree = SOURCE_ROOT; };
 		5CB640672280C9D300CE37FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
+		5CC9AAEF22A572B600C1F262 /* NohanaImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NohanaImagePicker.framework; path = Carthage/Build/iOS/NohanaImagePicker.framework; sourceTree = "<group>"; };
 		5CCDB5C22275D4710070E633 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		5CCDB5C62275F3350070E633 /* .GoogleMaps-Carthage.version */ = {isa = PBXFileReference; lastKnownFileType = text; name = ".GoogleMaps-Carthage.version"; path = "Carthage/Build/.GoogleMaps-Carthage.version"; sourceTree = "<group>"; };
 		5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = "<group>"; };
@@ -93,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CE0B4C722A4254400A532E6 /* TLPhotoPicker.framework in Frameworks */,
+				5CC9AAF022A572B600C1F262 /* NohanaImagePicker.framework in Frameworks */,
 				5C5C1778229AA93B0055A0CC /* Kingfisher.framework in Frameworks */,
 				5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */,
 				5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */,
@@ -168,6 +171,7 @@
 		5CCDB5C52275F3350070E633 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CC9AAEF22A572B600C1F262 /* NohanaImagePicker.framework */,
 				5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */,
 				5CF4248722A2D4D7008F3538 /* SDWebImage.framework */,
 				5CF4248522A2D258008F3538 /* DKCamera.framework */,
@@ -212,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				5C57554C228978DB0047DDEC /* LoginRequest.swift */,
+				5C82D38622AF04A3004C7682 /* JobStatusRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -298,7 +303,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsBase.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GoogleMapsCore.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TLPhotoPicker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NohanaImagePicker.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -307,7 +312,7 @@
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsBase.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/GoogleMapsCore.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
-				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/TLPhotoPicker.framework",
+				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/NohanaImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -322,6 +327,7 @@
 			files = (
 				5C5C177B229AE1EE0055A0CC /* SnapsResponse.swift in Sources */,
 				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
+				5C82D38722AF04A3004C7682 /* JobStatusRequest.swift in Sources */,
 				5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */,
 				5C575565228979D60047DDEC /* JobTrip.swift in Sources */,
 				5C0090BA22900C0200C65C52 /* JobDetailViewController.swift in Sources */,

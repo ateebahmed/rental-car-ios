@@ -132,7 +132,7 @@ class SnapsViewController: UIViewController {
                         let decoder = JSONDecoder()
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let responseJson = try? decoder.decode(StatusResponse.self, from: data)
-                        print("data", responseJson?.success)
+                        print("data", responseJson?.success ?? false)
                     }
                 }
                 task.resume()

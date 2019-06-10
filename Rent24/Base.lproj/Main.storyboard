@@ -479,9 +479,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jlV-Kl-NS7">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlV-Kl-NS7">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="fnb-c9-S7u"/>
                                 </items>
@@ -503,34 +502,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-il-7Fd">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-il-7Fd">
                                 <rect key="frame" x="16" y="473" width="47" height="30"/>
                                 <state key="normal" title="Pickup"/>
                                 <connections>
                                     <action selector="onClickListener:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="iOf-bb-1RX"/>
-                                    <segue destination="ca4-va-qt5" kind="presentation" modalPresentationStyle="formSheet" id="rhb-mE-p0A"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5T-cw-0CI">
+                                <rect key="frame" x="130" y="473" width="60" height="30"/>
+                                <state key="normal" title="Drop Off"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPD-R3-ibs">
+                                <rect key="frame" x="16" y="473" width="65" height="30"/>
+                                <state key="normal" title="Mid-Stop"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Nwo-ue-eLZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="L5T-cw-0CI" secondAttribute="trailing" constant="68" id="2o8-RB-onl"/>
                             <constraint firstItem="XGO-Av-ut2" firstAttribute="bottom" secondItem="uf4-Se-bHB" secondAttribute="top" id="IlR-mo-9Fw"/>
                             <constraint firstItem="XGO-Av-ut2" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="JaJ-Ev-kQ2"/>
+                            <constraint firstItem="jlV-Kl-NS7" firstAttribute="trailing" secondItem="XGO-Av-ut2" secondAttribute="trailing" id="Jiy-CB-Q5b"/>
                             <constraint firstAttribute="trailing" secondItem="XGO-Av-ut2" secondAttribute="trailing" id="QUz-i2-Yg6"/>
+                            <constraint firstItem="jlV-Kl-NS7" firstAttribute="leading" secondItem="XGO-Av-ut2" secondAttribute="leading" id="T2V-u0-ZcK"/>
+                            <constraint firstItem="SPD-R3-ibs" firstAttribute="centerX" secondItem="VKy-il-7Fd" secondAttribute="centerX" constant="9" id="UEx-S9-MEV"/>
                             <constraint firstItem="Nwo-ue-eLZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="242" id="WXF-dk-7QP"/>
+                            <constraint firstItem="SPD-R3-ibs" firstAttribute="baseline" secondItem="VKy-il-7Fd" secondAttribute="baseline" id="WqX-wT-ZSM"/>
                             <constraint firstItem="uf4-Se-bHB" firstAttribute="top" secondItem="VKy-il-7Fd" secondAttribute="bottom" constant="16" id="Zci-TC-29a"/>
                             <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="VKy-il-7Fd" secondAttribute="trailing" constant="241" id="af3-w4-opT"/>
                             <constraint firstItem="VKy-il-7Fd" firstAttribute="baseline" secondItem="Nwo-ue-eLZ" secondAttribute="baseline" id="b1T-BF-g6Z"/>
                             <constraint firstItem="XGO-Av-ut2" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="72" id="bib-R4-Fre"/>
+                            <constraint firstItem="L5T-cw-0CI" firstAttribute="centerX" secondItem="XGO-Av-ut2" secondAttribute="centerX" id="dW5-gZ-VKD"/>
+                            <constraint firstItem="jlV-Kl-NS7" firstAttribute="top" secondItem="YA7-8g-1Qi" secondAttribute="bottom" constant="8" id="eYH-1e-mUU"/>
+                            <constraint firstItem="L5T-cw-0CI" firstAttribute="leading" relation="lessThanOrEqual" secondItem="SPD-R3-ibs" secondAttribute="trailing" constant="67" id="mak-bj-9U2"/>
                             <constraint firstItem="Nwo-ue-eLZ" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="sWg-hh-pmA"/>
                             <constraint firstItem="VKy-il-7Fd" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="uFJ-7X-djW"/>
+                            <constraint firstItem="SPD-R3-ibs" firstAttribute="baseline" secondItem="L5T-cw-0CI" secondAttribute="baseline" id="xFx-ty-5kG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="pPZ-Jg-IAR"/>
                     <navigationItem key="navigationItem" id="D63-A0-Fve"/>
                     <connections>
+                        <outlet property="dropOffButton" destination="L5T-cw-0CI" id="SFy-cl-EMO"/>
                         <outlet property="map" destination="XGO-Av-ut2" id="LAa-3D-gBx"/>
+                        <outlet property="midStopButton" destination="SPD-R3-ibs" id="WKf-9I-Qfw"/>
                         <outlet property="pickupButton" destination="VKy-il-7Fd" id="8ln-X2-LKm"/>
+                        <segue destination="ca4-va-qt5" kind="presentation" identifier="showCarDetailsForm" modalPresentationStyle="currentContext" id="fCP-ai-kJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -940,7 +958,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fuel Range" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-PS-Nju">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fuel Range" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-PS-Nju">
                                                     <rect key="frame" x="20" y="20" width="280" height="31.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -962,7 +980,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odometer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvm-PR-L7d">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Odometer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvm-PR-L7d">
                                                     <rect key="frame" x="20" y="20" width="280" height="31.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1095,6 +1113,7 @@
                         <outlet property="fuelRangeTextField" destination="X2u-PS-Nju" id="J1g-Py-F8O"/>
                         <outlet property="notesTextView" destination="50D-CD-TAY" id="bV7-a4-CmK"/>
                         <outlet property="odometerTextField" destination="Xvm-PR-L7d" id="g4y-Zi-Ec6"/>
+                        <outlet property="submitButton" destination="cfk-PJ-OUh" id="VPr-ns-0md"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IK6-0k-R3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
