@@ -41,7 +41,7 @@ struct JobTrip: Decodable {
     var dropOffLongDouble: Double? {
         return Double(dropoffLong ?? "0.0")
     }
-    let status: String?
+    var status: String?
     var statusInt: Int? {
         return Int(status ?? "0")
     }

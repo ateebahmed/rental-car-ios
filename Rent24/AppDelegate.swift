@@ -70,11 +70,69 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let dropOffLong = notification.userInfo?["dropOffLong"] as? String,
                 let jobId = notification.userInfo?["jobId"] as? Int,
                 let mapVC = homeVC.selectedViewController as? MapViewController {
-                    let trip = JobTrip(id: jobId, rcmId: "", pickupLocation: "", pickupLat: pickupLat, pickupLong: pickupLong, dropoffLocation: "", startTime: "", jobType: "", task: "", dropoffLat: dropOffLat, dropoffLong: dropOffLong, status: "", route: "", stops: [])
-                    mapVC.updateMap(for: trip)
+
+                let trip = JobTrip(id: jobId, rcmId: "", pickupLocation: "", pickupLat: pickupLat, pickupLong: pickupLong, dropoffLocation: "", startTime: "", jobType: "", task: "", dropoffLat: dropOffLat, dropoffLong: dropOffLong, status: "", route: "", stops: [])
+                mapVC.updateMap(for: trip)
+                if 2 == trip.statusInt {
+                    let url = URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/job/status")!
+                    var request = URLRequest(url: url)
+                    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                    let token = getTokenFromKeychain()
+                    request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                    let body = JobStatusRequest(jobId: trip.id, status: "jobstart")
+                    let encoder = JSONEncoder()
+                    request.httpBody = try? encoder.encode(body)
+                    request.httpMethod = "POST"
+                    let configuration = URLSessionConfiguration.default
+                    if #available(iOS 11.0, *) {
+                        configuration.waitsForConnectivity = true
+                    }
+                    let session = URLSession(configuration: configuration)
+                    let task = session.dataTask(with: request) { data, response, error in
+                        if let error = error {
+                            print("error occured", error.localizedDescription)
+                            return
+                        }
+                        guard let httpResponse = response as? HTTPURLResponse,
+                            (200...299).contains(httpResponse.statusCode)
+                            else {
+                                print("response error", response.debugDescription)
+                                return
+                        }
+                        if let data = data {
+                            let decoder = JSONDecoder()
+                            if let responseJson = try? decoder.decode(StatusResponse.self, from: data) {
+                                print("response data", responseJson)
+                            }
+                        }
+                    }
+                    task.resume()
+                }
             }
             window?.rootViewController = homeVC
         }
+    }
+
+    private func getTokenFromKeychain() -> String {
+        let searchQuery: [CFString:Any] = [kSecClass: kSecClassGenericPassword,
+                                           kSecAttrGeneric: "com.rent24.driver.identifier".data(using: .utf8)!,
+                                           kSecAttrAccount: "driver".data(using: .utf8)!,
+                                           kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+                                           kSecReturnAttributes: kCFBooleanTrue!,
+                                           kSecMatchLimit: kSecMatchLimitOne,
+                                           kSecReturnData: kCFBooleanTrue!]
+        var item: CFTypeRef?
+        let searchStatus = SecItemCopyMatching(searchQuery as CFDictionary, &item)
+        if errSecSuccess == searchStatus {
+            guard let foundItem = item as? [String:Any],
+                let tokenData = foundItem[kSecValueData as String] as? Data,
+                let token = String(data: tokenData, encoding: .utf8)
+                else {
+                    return ""
+            }
+            return token
+        }
+        return ""
     }
 }
 

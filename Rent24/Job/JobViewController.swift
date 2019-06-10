@@ -112,13 +112,10 @@ class JobViewController: UIViewController {
             if let data = data {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let responseJson = try? decoder.decode(JobResponse.self, from: data)
-                if let jobResponse = responseJson {
-                    self.dataSource = JobCellDataSource(trips: jobResponse.success)
+                if let responseJson = try? decoder.decode(JobResponse.self, from: data) {
+                    self.dataSource = JobCellDataSource(trips: responseJson.success)
                     if 0 == type {
-                        if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 3 ... 4 ~= trip.statusInt!}).first {
-                            self.sendNotification(for: trip)
-                        } else if let trip = jobResponse.success.compactMap({trip in trip}).filter({trip in 2 == trip.statusInt}).first {
+                        if let trip = responseJson.success.compactMap({trip in trip}).filter({trip in 2 ... 4 ~= trip.statusInt!}).first {
                             self.sendNotification(for: trip)
                         }
                     }

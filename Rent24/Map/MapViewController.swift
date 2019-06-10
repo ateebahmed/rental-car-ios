@@ -13,7 +13,9 @@ class MapViewController: UIViewController {
 
     @IBOutlet private weak var map: GMSMapView!
     @IBOutlet weak var pickupButton: UIButton!
-
+    @IBOutlet weak var midStopButton: UIButton!
+    @IBOutlet weak var dropOffButton: UIButton!
+    
     private let locationManager = CLLocationManager()
     private var trip: JobTrip? {
         didSet {
@@ -21,10 +23,13 @@ class MapViewController: UIViewController {
         }
     }
     private var markers: [Int:CLLocation]?
-    private let currentLocationMarker = 0
-    private let pickupLocationMarker = 1
-    private let dropOffLocationMarker = 2
-    private let carDistance = 25.0
+    private static let currentLocationMarker = 0
+    private static let pickupLocationMarker = 1
+    private static let dropOffLocationMarker = 2
+    private static let carDistance = 25.0
+    private var status: String!
+    private static let pickup = "pickup"
+    static let dropOff = "dropoff"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +61,36 @@ class MapViewController: UIViewController {
         super.viewDidAppear(animated)
 
         updateMarkers()
+        if 4 != trip?.statusInt {
+            pickupButton.isHidden = true
+        } else {
+            pickupButton.isHidden = false
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let modal = segue.destination as? CarDetailTableViewController
+            else {
+                return
+        }
+        modal.status = status
+        modal.delegate = self
     }
 
     @IBAction func onClickListener(_ sender: UIButton) {
-        if let currentLocation = markers?[currentLocationMarker],
-            let pickupLocation = markers?[pickupLocationMarker],
-            !currentLocation.distance(from: pickupLocation).isLess(than: carDistance),
-            UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+        if let currentLocation = markers?[MapViewController.currentLocationMarker] {
+            var location: CLLocation!
+            if 4 != trip?.statusInt,
+                let pickupLocation = markers?[MapViewController.pickupLocationMarker] {
+                location = pickupLocation
+                status = MapViewController.pickup
+            } else if let dropOffLocation = markers?[MapViewController.dropOffLocationMarker] {
+                location = dropOffLocation
+                status = MapViewController.dropOff
+            }
+            if currentLocation.distance(from: location).isLessThanOrEqualTo(MapViewController.carDistance) {
+                performSegue(withIdentifier: "showCarDetailsForm", sender: self)
+            }
         }
     }
 
@@ -89,16 +117,15 @@ class MapViewController: UIViewController {
             }
             if let pickupLat = trip.pickupLatDouble,
                 let pickupLong = trip.pickupLongDouble {
-                markers?[pickupLocationMarker] = CLLocation(latitude: pickupLat, longitude: pickupLong)
+                markers?[MapViewController.pickupLocationMarker] = CLLocation(latitude: pickupLat, longitude: pickupLong)
             }
             if let dropOffLat = trip.dropOffLatDouble,
                 let dropOffLong = trip.dropOffLongDouble {
-                markers?[dropOffLocationMarker] = CLLocation(latitude: dropOffLat, longitude: dropOffLong)
+                markers?[MapViewController.dropOffLocationMarker] = CLLocation(latitude: dropOffLat, longitude: dropOffLong)
             }
             showMarkers(on: map)
         }
     }
-
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -125,7 +152,7 @@ extension MapViewController: CLLocationManagerDelegate {
             if nil == markers {
                 markers = [Int:CLLocation]()
             }
-            markers?[currentLocationMarker] = location
+            markers?[MapViewController.currentLocationMarker] = location
             showMarkers(on: map)
         }
     }
@@ -143,11 +170,17 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: GMSMapViewDelegate {
     func mapViewSnapshotReady(_ mapView: GMSMapView) {
         if var markers = markers,
-            let location = markers[currentLocationMarker] {
+            let location = markers[MapViewController.currentLocationMarker] {
             showMarkers(on: mapView)
 
             let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 16.0)
             map.animate(to: camera)
         }
+    }
+}
+
+extension MapViewController: CarDetailStatusUpdateDelegate {
+    func update(_ status: String) {
+        trip?.status = status
     }
 }
