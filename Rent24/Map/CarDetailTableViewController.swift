@@ -24,7 +24,7 @@ class CarDetailTableViewController: UITableViewController {
     private var pickedImageUrlsAndData: [NSURL: Data]!
     var status: String!
     var jobId: Int!
-    var delegate: CarDetailStatusUpdateDelegate!
+    weak var delegate: CarDetailStatusUpdateDelegate?
     var location: CLLocation!
 
     @IBAction func onCancelClickListener(_ sender: UIBarButtonItem) {
@@ -94,7 +94,9 @@ class CarDetailTableViewController: UITableViewController {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let responseJson = try? decoder.decode(StatusResponse.self, from: data)
                 print("data", responseJson?.success ?? false)
-                self.delegate.update("4")
+                DispatchQueue.main.async {
+                    self.delegate?.update("4")
+                }
                 if MapViewController.dropOff == self.status {
                     let url = URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/job/status")!
                     var request = URLRequest(url: url)
@@ -117,12 +119,23 @@ class CarDetailTableViewController: UITableViewController {
                         }
                         if let data = data,
                             let responseJson = try? decoder.decode(StatusResponse.self, from: data) {
+                            DispatchQueue.main.async {
+                                self.delegate?.removePlaces()
+                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeTabController") as! UITabBarController
+                                homeVC.selectedIndex = 0
+                                self.present(homeVC, animated: true, completion: {
+                                    self.dismiss(animated: true, completion: nil)
+                                })
+                            }
                             print("response data", responseJson)
                         }
                     }
                     task.resume()
                 }
-                self.dismiss(animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         }
         task.resume()
@@ -165,7 +178,6 @@ class CarDetailTableViewController: UITableViewController {
                 let tokenData = foundItem[kSecValueData as String] as? Data,
                 let token = String(data: tokenData, encoding: .utf8)
                 else {
-                    dismiss(animated: true, completion: nil)
                     return ""
             }
             return token
@@ -295,6 +307,8 @@ extension CarDetailTableViewController: UITextFieldDelegate {
     }
 }
 
-protocol CarDetailStatusUpdateDelegate {
+protocol CarDetailStatusUpdateDelegate: AnyObject {
     func update(_ status: String)
+
+    func removePlaces()
 }

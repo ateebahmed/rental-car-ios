@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C0090BA22900C0200C65C52 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0090B922900C0200C65C52 /* JobDetailViewController.swift */; };
+		5C06BCA122B04D9500DB0578 /* UIRoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C06BCA022B04D9500DB0578 /* UIRoundedCornersButton.swift */; };
 		5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */; };
 		5C1062632274AF0B00D8ECB7 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1062622274AF0B00D8ECB7 /* JobViewController.swift */; };
 		5C1062682274AF0B00D8ECB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1062662274AF0B00D8ECB7 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		5C0090B922900C0200C65C52 /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		5C06BCA022B04D9500DB0578 /* UIRoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedCornersButton.swift; sourceTree = "<group>"; };
 		5C10625D2274AF0B00D8ECB7 /* Rent24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rent24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C1062622274AF0B00D8ECB7 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				5C10626B2274AF0D00D8ECB7 /* LaunchScreen.storyboard */,
 				5C10626E2274AF0D00D8ECB7 /* Info.plist */,
 				5CF88CD1228976A7005692C3 /* Request */,
+				5C8F5EF622B055CD00D38A5C /* New Group1 */,
 			);
 			path = Rent24;
 			sourceTree = "<group>";
@@ -166,6 +169,14 @@
 				5C1062622274AF0B00D8ECB7 /* JobViewController.swift */,
 			);
 			path = Job;
+			sourceTree = "<group>";
+		};
+		5C8F5EF622B055CD00D38A5C /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				5C06BCA022B04D9500DB0578 /* UIRoundedCornersButton.swift */,
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		5CCDB5C52275F3350070E633 /* Frameworks */ = {
@@ -327,6 +338,7 @@
 			files = (
 				5C5C177B229AE1EE0055A0CC /* SnapsResponse.swift in Sources */,
 				5CB640682280C9D300CE37FF /* LoginViewController.swift in Sources */,
+				5C06BCA122B04D9500DB0578 /* UIRoundedCornersButton.swift in Sources */,
 				5C82D38722AF04A3004C7682 /* JobStatusRequest.swift in Sources */,
 				5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */,
 				5C575565228979D60047DDEC /* JobTrip.swift in Sources */,

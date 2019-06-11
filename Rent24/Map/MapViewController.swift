@@ -180,6 +180,11 @@ extension MapViewController: GMSMapViewDelegate {
 }
 
 extension MapViewController: CarDetailStatusUpdateDelegate {
+    func removePlaces() {
+        markers?.removeValue(forKey: MapViewController.pickupLocationMarker)
+        markers?.removeValue(forKey: MapViewController.dropOffLocationMarker)
+    }
+
     func update(_ status: String) {
         trip?.status = status
     }
