@@ -28,8 +28,6 @@ class SnapsViewController: UIViewController {
     private var token = ""
     private var dataSource: SnapsCellDataSource?
     private var cacheSnaps: SnapsSuccess?
-    private var receiptImage: UIImage?
-    private var receiptImageUrl: NSURL?
 
     @IBAction func snapValueChangeListener(_ sender: UISegmentedControl) {
         addReceiptButton(sender.selectedSegmentIndex)
@@ -38,7 +36,7 @@ class SnapsViewController: UIViewController {
 
     @IBAction func addReceiptButtonClickListener(_ sender: UIBarButtonItem) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-            self.showImagePicker()
+            performSegue(withIdentifier: "createReceiptDialog", sender: self)
         }
     }
     
@@ -54,15 +52,19 @@ class SnapsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         requestSnaps(for: snapTypeControl.selectedSegmentIndex)
     }
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        guard let controller = segue.destination as? CreateReceiptTableViewController
+            else {
+                return
+        }
+        controller.token = token
     }
-    */
 
     private func addReceiptButton(_ index: Int) {
         if 2 != index {
@@ -70,95 +72,6 @@ class SnapsViewController: UIViewController {
         } else {
             firstNavigationItem.setRightBarButton(addReceiptButton, animated: true)
         }
-    }
-
-    private func createAddReceiptAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Add Receipt", message: "Type receipt description and amount", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {_ in
-            guard let descriptionField = alert.textFields?.first,
-            let amountField = alert.textFields?[1] else {
-                return
-            }
-            if descriptionField.hasText,
-                amountField.hasText,
-                let dText = descriptionField.text,
-                let aText = amountField.text {
-                self.descriptionText = dText
-                self.amount = Double(aText)!
-                let imageData = UIImagePNGRepresentation(self.receiptImage!)
-                var request = URLRequest(url: URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/job/status")!)
-                request.httpMethod = "POST"
-                let boundary = "Boundary-\(UUID.init().uuidString)"
-                request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-                request.addValue("Bearer \(self.token)", forHTTPHeaderField: "Authorization")
-
-                var body = "--\(boundary)\r\n".data(using: .utf8)!
-                let filename = self.receiptImageUrl?.lastPathComponent!
-                body.append("Content-Disposition:form-data; name=\"snap[]\"; filename=\"\(filename!)\"\r\n".data(using: .utf8)!)
-                body.append("Content-Type: image/*\r\n\r\n".data(using: .utf8)!)
-                body.append(imageData!)
-                body.append("\r\n".data(using: .utf8)!)
-
-                let formDataPairs = [
-                    "status": "receipt",
-                    "title": dText,
-                    "amount": String(self.amount),
-                    "jobid": "24"
-                ]
-                var formData = Data()
-                for (k, v) in formDataPairs {
-                    formData.append("--\(boundary)\r\n".data(using: .utf8)!)
-                    formData.append("Content-Disposition: form-data; name=\"\(k)\"\r\n\r\n".data(using: .utf8)!)
-                    formData.append("\(v)\r\n".data(using: .utf8)!)
-                }
-
-                body.append(formData)
-                body.append("--\(boundary)--\r\n".data(using: .utf8)!)
-
-                request.httpBody = body
-
-                let task = self.session.dataTask(with: request) { data, response, error in
-                    if let error = error {
-                        print("error occured", error.localizedDescription)
-                        return
-                    }
-                    guard let httpResponse = response as? HTTPURLResponse,
-                        (200...299).contains(httpResponse.statusCode)
-                        else {
-                            print("response error", response.debugDescription)
-                            return
-                    }
-                    if let data = data {
-                        let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let responseJson = try? decoder.decode(StatusResponse.self, from: data)
-                        print("data", responseJson?.success ?? false)
-                    }
-                }
-                task.resume()
-            }
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {_ in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        alert.addTextField(configurationHandler: {(textField: UITextField!) in
-            textField.placeholder = "Enter description:"
-            textField.keyboardType = .default
-        })
-        alert.addTextField(configurationHandler: {(textField: UITextField!) in
-            textField.placeholder = "Enter amount:"
-            textField.keyboardType = .decimalPad
-        })
-        return alert
-    }
-
-    private func showImagePicker() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = false
-        
-        present(imagePicker, animated: true, completion: nil)
     }
 
     private func getTokenFromKeychain() -> String {
@@ -238,21 +151,5 @@ class SnapsViewController: UIViewController {
         default:
             dataSource = SnapsCellDataSource(snaps: [])
         }
-    }
-}
-
-extension SnapsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info["originalImage"] as! UIImage
-        if #available(iOS 11.0, *) {
-            receiptImageUrl = (info["imageUrl"] as! NSURL)
-        } else {
-            // Fallback on earlier versions
-            receiptImageUrl = (info["referenceURL"] as! NSURL)
-        }
-        receiptImage = image
-        dismiss(animated: true, completion: nil)
-        let alert = createAddReceiptAlert()
-        present(alert, animated: true, completion: nil)
     }
 }

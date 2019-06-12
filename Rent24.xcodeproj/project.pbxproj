@@ -20,6 +20,7 @@
 		5C396BE22291DA7D000B7E0B /* SnapCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */; };
 		5C396BE42291E3BC000B7E0B /* InvoiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BE32291E3BC000B7E0B /* InvoiceResponse.swift */; };
 		5C396BE62291E3F3000B7E0B /* InvoiceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C396BE52291E3F3000B7E0B /* InvoiceEntry.swift */; };
+		5C5349B522B1A23D00D2A238 /* CreateReceiptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5349B422B1A23D00D2A238 /* CreateReceiptTableViewController.swift */; };
 		5C57554D228978DB0047DDEC /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57554C228978DB0047DDEC /* LoginRequest.swift */; };
 		5C575561228979D60047DDEC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555C228979D50047DDEC /* LoginResponse.swift */; };
 		5C575562228979D60047DDEC /* LoginSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C57555D228979D50047DDEC /* LoginSuccess.swift */; };
@@ -62,6 +63,7 @@
 		5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCellDataSource.swift; sourceTree = "<group>"; };
 		5C396BE32291E3BC000B7E0B /* InvoiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceResponse.swift; sourceTree = "<group>"; };
 		5C396BE52291E3F3000B7E0B /* InvoiceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceEntry.swift; sourceTree = "<group>"; };
+		5C5349B422B1A23D00D2A238 /* CreateReceiptTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReceiptTableViewController.swift; sourceTree = "<group>"; };
 		5C57554C228978DB0047DDEC /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Rent24/LoginRequest.swift; sourceTree = SOURCE_ROOT; };
 		5C57555C228979D50047DDEC /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5C57555D228979D50047DDEC /* LoginSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSuccess.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				5C396BDD2291CF0B000B7E0B /* SnapsViewController.swift */,
 				5C396BDF2291CF35000B7E0B /* SnapCollectionViewCell.swift */,
 				5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */,
+				5C5349B422B1A23D00D2A238 /* CreateReceiptTableViewController.swift */,
 			);
 			path = Snap;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				5C1062612274AF0B00D8ECB7 /* AppDelegate.swift in Sources */,
 				5CE0B4CC22A446AC00A532E6 /* CarDetailTableViewController.swift in Sources */,
 				5C81A9AC2279C510007A1282 /* MainViewController.swift in Sources */,
+				5C5349B522B1A23D00D2A238 /* CreateReceiptTableViewController.swift in Sources */,
 				5C1062752274ECF300D8ECB7 /* InvoiceViewController.swift in Sources */,
 				5C396BE62291E3F3000B7E0B /* InvoiceEntry.swift in Sources */,
 				5C396BE42291E3BC000B7E0B /* InvoiceResponse.swift in Sources */,

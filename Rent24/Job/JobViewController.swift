@@ -36,7 +36,7 @@ class JobViewController: UIViewController {
         // Do any additional setup after loading the view.
         contentLoadingView.startAnimating()
 
-        jobTableView.estimatedRowHeight = 80
+        jobTableView.estimatedRowHeight = 100
         jobTableView.rowHeight = UITableViewAutomaticDimension
 
         jobTableView.delegate = self

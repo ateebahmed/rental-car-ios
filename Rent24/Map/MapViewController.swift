@@ -62,9 +62,13 @@ class MapViewController: UIViewController {
 
         updateMarkers()
         if 4 != trip?.statusInt {
-            pickupButton.isHidden = true
-        } else {
             pickupButton.isHidden = false
+            midStopButton.isHidden = true
+            dropOffButton.isHidden = true
+        } else {
+            pickupButton.isHidden = true
+            midStopButton.isHidden = false
+            dropOffButton.isHidden = false
         }
     }
 
