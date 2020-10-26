@@ -1,14 +1,14 @@
 //
-//  SnapsViewController.swift
+//  LaunchScreenViewController.swift
 //  Rent24
 //
-//  Created by Ateeb Ahmed on 28/04/2019.
+//  Created by Ateeb Ahmed on 01/05/2019.
 //  Copyright © 2019 Ateeb Ahmed. All rights reserved.
 //
 
 import UIKit
 
-class SnapsViewController: UIViewController {
+class LaunchScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
