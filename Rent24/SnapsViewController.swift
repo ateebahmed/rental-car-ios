@@ -1,6 +1,6 @@
 //
 //  SnapsViewController.swift
-//  Rent24
+
 //
 //  Created by Ateeb Ahmed on 28/04/2019.
 //  Copyright © 2019 Ateeb Ahmed. All rights reserved.

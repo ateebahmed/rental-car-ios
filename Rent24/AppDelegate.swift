@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Rent24
+
 //
 //  Created by Ateeb Ahmed on 27/04/2019.
 //  Copyright © 2019 Ateeb Ahmed. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyCuGHmRXRd5RMJaseiDZxJh0DcxGF5CdQI")
+        GMSServices.provideAPIKey("YOUR_GOOGLE_MAPS_SERVICES_KEY")
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
             UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound], completionHandler: {result, error in
@@ -33,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Fallback on earlier versions
             application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType(rawValue: UIUserNotificationType.sound.rawValue | UIUserNotificationType.badge.rawValue | UIUserNotificationType.alert.rawValue), categories: nil))
         }
+        application.registerForRemoteNotifications()
         return true
     }
 
@@ -113,6 +117,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("device token", deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("error with remote notification registration", error)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("notification", userInfo)
+    }
+
     private func getTokenFromKeychain() -> String {
         let searchQuery: [CFString:Any] = [kSecClass: kSecClassGenericPassword,
                                            kSecAttrGeneric: "com.rent24.driver.identifier".data(using: .utf8)!,
@@ -140,5 +157,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.badge, .alert, .sound])
+    }
+}
+
+extension AppDelegate: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("token", fcmToken)
     }
 }

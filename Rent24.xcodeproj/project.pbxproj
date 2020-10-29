@@ -41,14 +41,21 @@
 		5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5C82275F34F0070E633 /* GoogleMaps.framework */; };
 		5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CA2275F3CF0070E633 /* GoogleMapsCore.framework */; };
 		5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CB2275F3CF0070E633 /* GoogleMapsBase.framework */; };
-		5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDB5CD2275F3CF0070E633 /* GooglePlaces.framework */; };
 		5CCDB5D322762BFE0070E633 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5CCDB5D222762BFE0070E633 /* .gitignore */; };
 		5CE0B4C922A425CF00A532E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0B4C822A425CF00A532E6 /* MapViewController.swift */; };
 		5CE0B4CC22A446AC00A532E6 /* CarDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0B4CB22A446AC00A532E6 /* CarDetailTableViewController.swift */; };
+		5CE5D5A722B43DF4002005E7 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5D59A22B43D2A002005E7 /* FirebaseCore.framework */; };
+		5CE5D5A922B43DF4002005E7 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5D59722B43D29002005E7 /* FirebaseInstanceID.framework */; };
+		5CE5D5AA22B43DF4002005E7 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5D59822B43D2A002005E7 /* FirebaseMessaging.framework */; };
+		5CE5D5AF22B44163002005E7 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5D59922B43D2A002005E7 /* Firebase.framework */; };
+		5CE5D5B222B44191002005E7 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5D5B022B44190002005E7 /* Protobuf.framework */; };
+		5CE5D5B322B44191002005E7 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE5D5B122B44190002005E7 /* GoogleUtilities.framework */; };
+		5CE5D5B722B445D3002005E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CE5D5B622B445D3002005E7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C0090B922900C0200C65C52 /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		5C01311C254B343800C93006 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C06BCA022B04D9500DB0578 /* UIRoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedCornersButton.swift; sourceTree = "<group>"; };
 		5C10625D2274AF0B00D8ECB7 /* Rent24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rent24.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +98,18 @@
 		5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLPhotoPicker.framework; path = Carthage/Build/iOS/TLPhotoPicker.framework; sourceTree = "<group>"; };
 		5CE0B4C822A425CF00A532E6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5CE0B4CB22A446AC00A532E6 /* CarDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableViewController.swift; sourceTree = "<group>"; };
+		5CE5D59422B43CE3002005E7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5CE5D59622B43D29002005E7 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		5CE5D59722B43D29002005E7 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		5CE5D59822B43D2A002005E7 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
+		5CE5D59922B43D2A002005E7 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		5CE5D59A22B43D2A002005E7 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		5CE5D59B22B43D2A002005E7 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		5CE5D59C22B43D2A002005E7 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		5CE5D5AC22B43E53002005E7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5CE5D5B022B44190002005E7 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
+		5CE5D5B122B44190002005E7 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
+		5CE5D5B622B445D3002005E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CF4248522A2D258008F3538 /* DKCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DKCamera.framework; path = Carthage/Build/iOS/DKCamera.framework; sourceTree = "<group>"; };
 		5CF4248722A2D4D7008F3538 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,12 +119,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE5D5B222B44191002005E7 /* Protobuf.framework in Frameworks */,
+				5CE5D5B322B44191002005E7 /* GoogleUtilities.framework in Frameworks */,
+				5CE5D5AF22B44163002005E7 /* Firebase.framework in Frameworks */,
+				5CE5D5A722B43DF4002005E7 /* FirebaseCore.framework in Frameworks */,
+				5CE5D5A922B43DF4002005E7 /* FirebaseInstanceID.framework in Frameworks */,
+				5CE5D5AA22B43DF4002005E7 /* FirebaseMessaging.framework in Frameworks */,
 				5CC9AAF022A572B600C1F262 /* NohanaImagePicker.framework in Frameworks */,
 				5C5C1778229AA93B0055A0CC /* Kingfisher.framework in Frameworks */,
 				5CCDB5C92275F34F0070E633 /* GoogleMaps.framework in Frameworks */,
 				5CCDB5CE2275F3CF0070E633 /* GoogleMapsCore.framework in Frameworks */,
 				5CCDB5CF2275F3CF0070E633 /* GoogleMapsBase.framework in Frameworks */,
-				5CCDB5D12275F3CF0070E633 /* GooglePlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +139,7 @@
 		5C1062542274AF0A00D8ECB7 = {
 			isa = PBXGroup;
 			children = (
+				5C01311C254B343800C93006 /* README.md */,
 				5CCDB5D222762BFE0070E633 /* .gitignore */,
 				5CCDB5C22275D4710070E633 /* Cartfile */,
 				5C10625F2274AF0B00D8ECB7 /* Rent24 */,
@@ -134,6 +159,7 @@
 		5C10625F2274AF0B00D8ECB7 /* Rent24 */ = {
 			isa = PBXGroup;
 			children = (
+				5CE5D5B622B445D3002005E7 /* GoogleService-Info.plist */,
 				5CE0B4CA22A425E100A532E6 /* Map */,
 				5C396BDC2291CEC7000B7E0B /* Snap */,
 				5C5755682289845C0047DDEC /* Job */,
@@ -185,6 +211,17 @@
 		5CCDB5C52275F3350070E633 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CE5D5B122B44190002005E7 /* GoogleUtilities.framework */,
+				5CE5D5B022B44190002005E7 /* Protobuf.framework */,
+				5CE5D5AC22B43E53002005E7 /* libsqlite3.tbd */,
+				5CE5D59B22B43D2A002005E7 /* FIRAnalyticsConnector.framework */,
+				5CE5D59922B43D2A002005E7 /* Firebase.framework */,
+				5CE5D59C22B43D2A002005E7 /* FirebaseAnalytics.framework */,
+				5CE5D59A22B43D2A002005E7 /* FirebaseCore.framework */,
+				5CE5D59622B43D29002005E7 /* FirebaseCoreDiagnostics.framework */,
+				5CE5D59722B43D29002005E7 /* FirebaseInstanceID.framework */,
+				5CE5D59822B43D2A002005E7 /* FirebaseMessaging.framework */,
+				5CE5D59422B43CE3002005E7 /* libc++.tbd */,
 				5CC9AAEF22A572B600C1F262 /* NohanaImagePicker.framework */,
 				5CE0B4C622A4254400A532E6 /* TLPhotoPicker.framework */,
 				5CF4248722A2D4D7008F3538 /* SDWebImage.framework */,
@@ -245,7 +282,7 @@
 				5C1062592274AF0B00D8ECB7 /* Sources */,
 				5C10625A2274AF0B00D8ECB7 /* Frameworks */,
 				5C10625B2274AF0B00D8ECB7 /* Resources */,
-				5CCDB5C42275F06F0070E633 /* ShellScript */,
+				5CCDB5C42275F06F0070E633 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -268,6 +305,12 @@
 				TargetAttributes = {
 					5C10625C2274AF0B00D8ECB7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,13 +342,14 @@
 				5C10626A2274AF0D00D8ECB7 /* Assets.xcassets in Resources */,
 				5CCDB5C32275D4710070E633 /* Cartfile in Resources */,
 				5C1062682274AF0B00D8ECB7 /* Main.storyboard in Resources */,
+				5CE5D5B722B445D3002005E7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5CCDB5C42275F06F0070E633 /* ShellScript */ = {
+		5CCDB5C42275F06F0070E633 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,6 +363,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NohanaImagePicker.framework",
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -515,13 +560,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Rent24/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -535,13 +585,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Rent24/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
