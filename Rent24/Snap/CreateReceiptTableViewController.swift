@@ -33,7 +33,7 @@ class CreateReceiptTableViewController: UITableViewController {
             let aText = amountTextField.text {
 
             let dText = options[descriptionPicker.selectedRow(inComponent: 0)]
-            let imageData = UIImagePNGRepresentation(self.receiptImage!)
+            let imageData = self.receiptImage!.pngData()
             var request = URLRequest(url: URL(string: "http://www.technidersolutions.com/sandbox/rmc/public/api/job/status")!)
             request.httpMethod = "POST"
             let boundary = "Boundary-\(UUID.init().uuidString)"
@@ -217,7 +217,10 @@ extension CreateReceiptTableViewController: UITextFieldDelegate {
 }
 
 extension CreateReceiptTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         let image = info["originalImage"] as! UIImage
         if #available(iOS 11.0, *) {
             receiptImageUrl = (info["imageUrl"] as! NSURL)
@@ -228,4 +231,9 @@ extension CreateReceiptTableViewController: UIImagePickerControllerDelegate, UIN
         receiptImage = image
         dismiss(animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
 }

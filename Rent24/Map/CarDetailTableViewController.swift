@@ -288,7 +288,7 @@ extension CarDetailTableViewController: NohanaImagePickerControllerDelegate {
                     let imageUrl = info["PHImageFileURLKey"] as? NSURL,
                     let data = data,
                     let image = UIImage(data: data) {
-                    let png = UIImagePNGRepresentation(image)
+                    let png = image.pngData()
                     self.pickedImageUrlsAndData[imageUrl] = png
                 }
             })
