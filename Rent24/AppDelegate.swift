@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Rent24
+
 //
 //  Created by Ateeb Ahmed on 27/04/2019.
 //  Copyright © 2019 Ateeb Ahmed. All rights reserved.
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyCuGHmRXRd5RMJaseiDZxJh0DcxGF5CdQI")
+        GMSServices.provideAPIKey("YOUR_GOOGLE_MAPS_SERVICES_KEY")
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         if #available(iOS 10.0, *) {

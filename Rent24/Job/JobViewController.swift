@@ -1,6 +1,6 @@
 //
 //  FirstViewController.swift
-//  Rent24
+
 //
 //  Created by Ateeb Ahmed on 27/04/2019.
 //  Copyright © 2019 Ateeb Ahmed. All rights reserved.
@@ -61,11 +61,6 @@ class JobViewController: UIViewController {
             self.token = token
         }
     }
-
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
