@@ -57,7 +57,7 @@
 		5C0090B922900C0200C65C52 /* JobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		5C01311C254B343800C93006 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C06BCA022B04D9500DB0578 /* UIRoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedCornersButton.swift; sourceTree = "<group>"; };
-		5C10625D2274AF0B00D8ECB7 /* Rent24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rent24.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C10625D2274AF0B00D8ECB7 /* Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Driver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1062602274AF0B00D8ECB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C1062622274AF0B00D8ECB7 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		5C1062672274AF0B00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,26 +65,26 @@
 		5C10626C2274AF0D00D8ECB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C10626E2274AF0D00D8ECB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1062742274ECF300D8ECB7 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvoiceViewController.swift; path = Invoice/InvoiceViewController.swift; sourceTree = "<group>"; };
-		5C396BDD2291CF0B000B7E0B /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Rent24/SnapsViewController.swift; sourceTree = SOURCE_ROOT; };
+		5C396BDD2291CF0B000B7E0B /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = Driver/SnapsViewController.swift; sourceTree = SOURCE_ROOT; };
 		5C396BDF2291CF35000B7E0B /* SnapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C396BE12291DA7D000B7E0B /* SnapCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCellDataSource.swift; sourceTree = "<group>"; };
 		5C396BE32291E3BC000B7E0B /* InvoiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceResponse.swift; sourceTree = "<group>"; };
 		5C396BE52291E3F3000B7E0B /* InvoiceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceEntry.swift; sourceTree = "<group>"; };
 		5C5349B422B1A23D00D2A238 /* CreateReceiptTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReceiptTableViewController.swift; sourceTree = "<group>"; };
-		5C57554C228978DB0047DDEC /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Rent24/LoginRequest.swift; sourceTree = SOURCE_ROOT; };
+		5C57554C228978DB0047DDEC /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRequest.swift; path = Driver/LoginRequest.swift; sourceTree = SOURCE_ROOT; };
 		5C57555C228979D50047DDEC /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5C57555D228979D50047DDEC /* LoginSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSuccess.swift; sourceTree = "<group>"; };
 		5C57555E228979D60047DDEC /* JobResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobResponse.swift; sourceTree = "<group>"; };
 		5C57555F228979D60047DDEC /* TripStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStop.swift; sourceTree = "<group>"; };
 		5C575560228979D60047DDEC /* JobTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTrip.swift; sourceTree = "<group>"; };
-		5C575566228984470047DDEC /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobTableViewCell.swift; path = /Users/aahmed/Documents/rent24/Rent24/Rent24/JobTableViewCell.swift; sourceTree = "<absolute>"; };
-		5C575569228989740047DDEC /* JobCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobCellDataSource.swift; path = /Users/aahmed/Documents/rent24/Rent24/Rent24/Job/JobCellDataSource.swift; sourceTree = "<absolute>"; };
+		5C575566228984470047DDEC /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobTableViewCell.swift; path = /Users/aahmed/Documents/rent24/Driver/Driver/JobTableViewCell.swift; sourceTree = "<absolute>"; };
+		5C575569228989740047DDEC /* JobCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobCellDataSource.swift; path = /Users/aahmed/Documents/rent24/Driver/Driver/Job/JobCellDataSource.swift; sourceTree = "<absolute>"; };
 		5C5C1777229AA93B0055A0CC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		5C5C177A229AE1EE0055A0CC /* SnapsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsResponse.swift; sourceTree = "<group>"; };
 		5C5C177C229AE2120055A0CC /* SnapsSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsSuccess.swift; sourceTree = "<group>"; };
 		5C5C177E229B48D90055A0CC /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		5C81A9AB2279C510007A1282 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		5C82D38622AF04A3004C7682 /* JobStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobStatusRequest.swift; path = Rent24/JobStatusRequest.swift; sourceTree = SOURCE_ROOT; };
+		5C82D38622AF04A3004C7682 /* JobStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobStatusRequest.swift; path = Driver/JobStatusRequest.swift; sourceTree = SOURCE_ROOT; };
 		5CB640672280C9D300CE37FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		5CC9AAEF22A572B600C1F262 /* NohanaImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NohanaImagePicker.framework; path = Carthage/Build/iOS/NohanaImagePicker.framework; sourceTree = "<group>"; };
 		5CCDB5C22275D4710070E633 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				5C01311C254B343800C93006 /* README.md */,
 				5CCDB5D222762BFE0070E633 /* .gitignore */,
 				5CCDB5C22275D4710070E633 /* Cartfile */,
-				5C10625F2274AF0B00D8ECB7 /* Rent24 */,
+				5C10625F2274AF0B00D8ECB7 /* Driver */,
 				5C10625E2274AF0B00D8ECB7 /* Products */,
 				5CCDB5C52275F3350070E633 /* Frameworks */,
 			);
@@ -151,12 +151,12 @@
 		5C10625E2274AF0B00D8ECB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C10625D2274AF0B00D8ECB7 /* Rent24.app */,
+				5C10625D2274AF0B00D8ECB7 /* Driver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C10625F2274AF0B00D8ECB7 /* Rent24 */ = {
+		5C10625F2274AF0B00D8ECB7 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
 				5CE5D5B622B445D3002005E7 /* GoogleService-Info.plist */,
@@ -175,7 +175,7 @@
 				5CF88CD1228976A7005692C3 /* Request */,
 				5C8F5EF622B055CD00D38A5C /* New Group1 */,
 			);
-			path = Rent24;
+			path = Driver;
 			sourceTree = "<group>";
 		};
 		5C396BDC2291CEC7000B7E0B /* Snap */ = {
@@ -275,9 +275,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C10625C2274AF0B00D8ECB7 /* Rent24 */ = {
+		5C10625C2274AF0B00D8ECB7 /* Driver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C1062712274AF0D00D8ECB7 /* Build configuration list for PBXNativeTarget "Rent24" */;
+			buildConfigurationList = 5C1062712274AF0D00D8ECB7 /* Build configuration list for PBXNativeTarget "Driver" */;
 			buildPhases = (
 				5C1062592274AF0B00D8ECB7 /* Sources */,
 				5C10625A2274AF0B00D8ECB7 /* Frameworks */,
@@ -288,9 +288,9 @@
 			);
 			dependencies = (
 			);
-			name = Rent24;
+			name = Driver;
 			productName = Rent24;
-			productReference = 5C10625D2274AF0B00D8ECB7 /* Rent24.app */;
+			productReference = 5C10625D2274AF0B00D8ECB7 /* Driver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -314,7 +314,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5C1062582274AF0A00D8ECB7 /* Build configuration list for PBXProject "Rent24" */;
+			buildConfigurationList = 5C1062582274AF0A00D8ECB7 /* Build configuration list for PBXProject "Driver" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -327,7 +327,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C10625C2274AF0B00D8ECB7 /* Rent24 */,
+				5C10625C2274AF0B00D8ECB7 /* Driver */,
 			);
 		};
 /* End PBXProject section */
@@ -562,14 +562,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Rent24/Info.plist;
+				INFOPLIST_FILE = Driver/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ateebahmed.freelance.Driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -587,14 +587,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Rent24/Info.plist;
+				INFOPLIST_FILE = Driver/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rent24.driver.Rent24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ateebahmed.freelance.Driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -604,7 +604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C1062582274AF0A00D8ECB7 /* Build configuration list for PBXProject "Rent24" */ = {
+		5C1062582274AF0A00D8ECB7 /* Build configuration list for PBXProject "Driver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C10626F2274AF0D00D8ECB7 /* Debug */,
@@ -613,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C1062712274AF0D00D8ECB7 /* Build configuration list for PBXNativeTarget "Rent24" */ = {
+		5C1062712274AF0D00D8ECB7 /* Build configuration list for PBXNativeTarget "Driver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1062722274AF0D00D8ECB7 /* Debug */,
