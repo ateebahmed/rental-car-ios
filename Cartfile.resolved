@@ -1,3 +1,5 @@
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json" "6.2.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json" "6.2.0"
 github "leoneparise/GoogleMaps-Carthage" "3.1.0"
 github "nohana/NohanaImagePicker" "0.9.2"
 github "onevcat/Kingfisher" "4.10.1"
